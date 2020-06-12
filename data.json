@@ -1,16 +1,7 @@
 {
   "instructors": [
     {
-      "id": "1",
-      "name": "Alexandre Santos Jr",
-      "avatar_url": "https://static.rfstat.com/renderforest/images/v2/logo-homepage/flat_3.png",
-      "birth": 951177600000,
-      "gender": "F",
-      "services": "Jiu-Jitsu, DEV, tUEN",
-      "created_at": 1591926735339
-    },
-    {
-      "id": 2,
+      "id": "2",
       "name": "Alexandre Santos Junior",
       "avatar_url": "https://static.rfstat.com/renderforest/images/v2/logo-homepage/flat_3.png",
       "birth": 919641600000,
