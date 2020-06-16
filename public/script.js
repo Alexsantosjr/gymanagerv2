@@ -1,10 +1,8 @@
-const modalOverlay = document.querySelector(".modal-overlay");
-const recipes = document.querySelectorAll('.revenues')
+const currentPage = location.pathname
+const menuItems = document.querySelectorAll("header .menu a")
 
-for (let recipe of recipes ){
-    recipe.addEventListener("click", function(){
-        const receitaId = recipe.getAttribute("id");
-        window.location.href = `/receita?id=${receitaId}`
-        
-    })
+for (item of menuItems){
+    if(currentPage.includes(item.getAttribute("href"))){
+        item.classList.add("active")
+    }
 }

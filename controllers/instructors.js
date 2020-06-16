@@ -1,6 +1,13 @@
 const fs = require('fs')
-const data = require('./data.json')
-const { age, date } = require("./utils")
+const data = require('../data.json')
+const { age, date } = require("../utils")
+
+//index
+exports.index = function(req, res){
+
+
+    return res.render("instructors/index", { instructors: data.instructors })
+}
 
 //show
 exports.show = function(req, res){
@@ -17,6 +24,7 @@ exports.show = function(req, res){
     const instructor = {
         ...foundInstructor,
         age: age(foundInstructor.birth),
+        birth: Date.parse(req.params.birth),
         services: foundInstructor.services.split(","),
         created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at),
     }
@@ -24,8 +32,12 @@ exports.show = function(req, res){
     return res.render('instructors/show', { instructor })
 }
 
+//create
+exports.create = function(req, res){
+    return res.render("instructors/create")
+}
 
-// create
+// post
 exports.post = function(req, res){
 
     const keys = Object.keys(req.body)
@@ -99,7 +111,8 @@ exports.put = function(req, res){
     const instructor = {
         ...foundInstructor,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        id: Number(req.body.id)
     }
 
     data.instructors[index] = instructor
