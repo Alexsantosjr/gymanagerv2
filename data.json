@@ -1,58 +1,27 @@
 {
   "members": [
     {
-      "id": 1,
+      "id": 6,
       "name": "ALEXANDRE OLIVEIRA DOS SANTOS JUNIOR",
-      "avatar_url": "https://static.rfstat.com/renderforest/images/v2/logo-homepage/flat_3.png",
-      "birth": 919641600000,
-      "gender": "M",
-      "created_at": 1592267598777
-    },
-    {
-      "id": 2,
-      "name": "Alex Santos",
-      "avatar_url": "https://media-exp1.licdn.com/dms/image/C4D03AQHAtNlfpcl9kw/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=AaOeu3P84JI3Yu3uGa1YA1N0AtCEc0v3nBF386mjpxE",
-      "birth": 919641600000,
-      "gender": "M",
-      "created_at": 1592267747476
-    },
-    {
-      "id": 3,
-      "name": "Alex Santos",
       "email": "alexsantsjrr@gmail.com",
-      "avatar_url": "http://google.com",
-      "birth": -58344364800000,
+      "avatar_url": "https://static.rfstat.com/renderforest/images/v2/logo-homepage/flat_3.png",
+      "birth": 11138688000000,
       "gender": "M",
-      "created_at": 1592267956202
+      "blood": "O+",
+      "weight": "23",
+      "height": "23"
+    },
+    {
+      "id": 7,
+      "name": "Junior",
+      "email": "junior@hotmail.com",
+      "avatar_url": "https://http2.mlstatic.com/mascara-cosplay-watch-dogs-2-terror-assassino-wrench-rave-D_NQ_NP_970054-MLB27458343106_052018-F.jpg",
+      "birth": 126230400000,
+      "gender": "M",
+      "blood": "B+",
+      "weight": "69",
+      "height": "175"
     }
   ],
-  "instructors": [
-    {
-      "id": 2,
-      "name": "Alexandre Santos Junior",
-      "avatar_url": "https://http2.mlstatic.com/mascara-cosplay-watch-dogs-2-terror-assassino-wrench-rave-D_NQ_NP_970054-MLB27458343106_052018-F.jpg",
-      "birth": 919641600000,
-      "gender": "M",
-      "services": "Jiu-Jitsu, Judô, Dev, Lab, TeU",
-      "created_at": 1591926745443
-    },
-    {
-      "id": 3,
-      "name": "Alexandre Santos",
-      "avatar_url": "https://static.rfstat.com/renderforest/images/v2/logo-homepage/flat_3.png",
-      "birth": 919641600000,
-      "gender": "M",
-      "services": "Jiu-Jitsu",
-      "created_at": 1591926819316
-    },
-    {
-      "id": 4,
-      "name": "Alexandre Santos",
-      "avatar_url": "https://static.rfstat.com/renderforest/images/v2/logo-homepage/flat_3.png",
-      "birth": 919641600000,
-      "gender": "M",
-      "services": "Jiu-Jitsu",
-      "created_at": 1591926922259
-    }
-  ]
+  "instructors": []
 }
