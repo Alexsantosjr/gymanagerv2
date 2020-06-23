@@ -1,4 +1,4 @@
-﻿# Gym Manager
+﻿# Gym Manager v2
 
 [![Author](https://img.shields.io/badge/author-AlexSantosJr-7159c1?style=flat-square)](https://github.com/Alexsantosjr)
 [![Languages](https://img.shields.io/github/languages/count/Alexsantosjr/GymManager?color=%7159c1&style=flat-square)](#)
@@ -40,11 +40,18 @@ SSH URLs provide access to a Git repository via SSH, a secure protocol. If you h
 
 ```yarn install```
 
+```express install```
+
+```nunjucks install```
+
+```postgres sql install```
+
 
 # :rocket: Features
 
-* 🏋  Registration of instructors and members
-* 🏋  The platform contributes to professionals in the field of physical education
+* 🏋  Registration of instructors and members.
+* 💻  The platform contributes to professionals in the field of physical education.
+* 🌐  With version 2 of gymanager, a connection to the database was assigned for creation, editing and deletion in the database.
 
 
 
@@ -52,7 +59,7 @@ SSH URLs provide access to a Git repository via SSH, a secure protocol. If you h
 
 **Question:** What are the tecnologies used in this project?
 
-**Answer:** The tecnologies used in this project for while are [HTML], [CSS], [JAVASCRIPT], [NUNJUCKS]
+**Answer:** The tecnologies used in this project for while are [HTML], [CSS], [JAVASCRIPT], [NUNJUCKS], [EXPRESS], [NODE.JS], [POSTGRES]
 ##
 
 
