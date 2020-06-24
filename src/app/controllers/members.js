@@ -1,43 +1,78 @@
 const { age, date } = require("../../lib/utils")
+const Member = require("../models/member")
 
 module.exports = {
-    index(req, res){
-
-        return res.render("members/index", { members: data.members })
-},
-
-    show(req, res){
-        return
+        index(req, res){
+            
+            Member.all(function(members){
+                return res.render("members/index", {members})
+            })
     },
 
-    create(req, res){
-        return res.render("members/create")
-},
+        show(req, res){
 
-    post(req, res){
+            Member.find(req.params.id, function(member){
+                if(!member) return res.send("Member not found!")               
+                member.birth = date(member.birth).birthDay
+                return res.render("members/show", {member})
+            })
+        },
+
+        create(req, res){
+
+            Member.instructorsSelectOptions(function(options){
+                return res.render("members/create", { instructorOptions: options })
+            })
+    },
+
+        post(req, res){
+        
+            const keys = Object.keys(req.body)
+
+            for( key of keys){
+                if (req.body[key] == "") {
+                    return res.send("Please, fill all fields")
+                }
+            }
+
+            Member.create(req.body, function(member){
+                return res.redirect(`/members/${member.id}`)
+            })
+    },
     
+    edit(req, res){
+
+        Member.find(req.params.id, function(member){
+            if(!member) return res.send("Member not found!")
+            
+            member.birth = date(member.birth).iso
+
+            Member.instructorsSelectOptions(function(options){
+                return res.render("members/edit", { member, instructorOptions: options })
+            })
+
+        })
+    },
+
+    put(req, res){
         const keys = Object.keys(req.body)
 
-        for( key of keys){
-            if (req.body[key] == "") {
-                return res.send("Please, fill all fields")
+            for( key of keys){
+                if (req.body[key] == "") {
+                    return res.send("Please, fill all fields")
+                }
             }
-        }
 
-        let { avatar_url, birth, services, gender, name} = req.body
+        Member.update(req.body, function(){
+            return res.redirect(`/members/${req.body.id}`)
+        })
+    },
 
-        return
-},
-
-edit(req, res){
-    return
-},
-
-put(req, res){
-    return
-},
-
-delete(req, res){
-    return
-},
+    delete(req, res){
+        Member.delete(req.body.id, function(){
+            return res.redirect(`members`)
+        })
+    },
 }
+
+
