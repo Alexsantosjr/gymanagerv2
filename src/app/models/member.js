@@ -21,7 +21,7 @@ module.exports = {
                     weight,
                     height,
                     instructor_id
-                ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8 $9)
+                ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
                 RETURNING id
             `
 
@@ -65,7 +65,7 @@ module.exports = {
             blood=($6),
             weight=($7),
             height=($8),
-            instructor_id =($9)
+            instructor_id=($9)
         WHERE id = $10
         `
 

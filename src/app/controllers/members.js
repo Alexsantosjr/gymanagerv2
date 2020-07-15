@@ -17,7 +17,7 @@ module.exports = {
             offset,
             callback(members){
                 const pagination = {
-                    total: Math.ceil(members[0]),
+                    total: Math.ceil(members[0].total/limit),
                     page
                 }
                 return res.render("members/index", { members, pagination, filter })
